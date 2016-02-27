@@ -6,3 +6,11 @@ C:\Work\MyTestProject\MyTestProjectTest\obj\Debug\MyTestProjectTest.csprojResolv
 C:\Work\MyTestProject\MyTestProjectTest\obj\Debug\MyTestProjectTest.dll
 C:\Work\MyTestProject\MyTestProjectTest\obj\Debug\MyTestProjectTest.pdb
 C:\Work\MyTestProject\MyTestProjectTest\bin\Debug\MyTestProject.dll
+D:\Work\ValidateHtml\MyTestProjectTest\bin\Debug\MyTestProjectTest.dll
+D:\Work\ValidateHtml\MyTestProjectTest\bin\Debug\MyTestProjectTest.pdb
+D:\Work\ValidateHtml\MyTestProjectTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Work\ValidateHtml\MyTestProjectTest\bin\Debug\MyTestProject.dll
+D:\Work\ValidateHtml\MyTestProjectTest\bin\Debug\MyTestProject.pdb
+D:\Work\ValidateHtml\MyTestProjectTest\obj\Debug\MyTestProjectTest.csprojResolveAssemblyReference.cache
+D:\Work\ValidateHtml\MyTestProjectTest\obj\Debug\MyTestProjectTest.dll
+D:\Work\ValidateHtml\MyTestProjectTest\obj\Debug\MyTestProjectTest.pdb

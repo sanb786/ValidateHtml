@@ -5,7 +5,7 @@ using MyTestProject;
 namespace MyTestProjectTest
 {
     [TestClass]
-    public class UnitTest1
+    public class TestJaggedArray
     {
         [TestMethod]
         public void TestFlatternedJaggedArray()
