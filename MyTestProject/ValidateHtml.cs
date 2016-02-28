@@ -7,9 +7,9 @@ namespace MyTestProject
     public class ValidateHtml
     {
         private Stack<string> _htmlTag;
-        private string _currentWord = string.Empty;
+        private string _currentWord = string.Empty; //TODO use string builder
         private bool _canAdd = false;
-        private string _exceptionReport;
+        private string _exceptionReport; //TODO use string builder
         bool _verifyTag = false;
         IList<string> _voidElements;
 
@@ -25,7 +25,7 @@ namespace MyTestProject
         /// </summary>
         /// <param name="pointer">The pointer.</param>
         /// <returns></returns>
-        public object ProcessOpenTag(IEnumerator pointer)
+        private object ProcessOpenTag(IEnumerator pointer)
         {
 
             while (pointer.MoveNext())
@@ -62,7 +62,7 @@ namespace MyTestProject
         /// </summary>
         /// <param name="verifyTag">if set to <c>true</c> [verify tag].</param>
         /// <returns></returns>
-        public object ProcessCloseTag(bool verifyTag)
+        private object ProcessCloseTag(bool verifyTag)
         {
             if (!verifyTag)
             {
@@ -94,29 +94,43 @@ namespace MyTestProject
         }
 
 
-        public void GetExceptionReport()
+        private bool GetExceptionReport()
         {
+            bool hasException = true;
             foreach (var item in _htmlTag)
                 _exceptionReport += $"Expected Ending tag for {item} \n";
 
-            if (string.IsNullOrWhiteSpace(_exceptionReport)) _exceptionReport = "Correctly tagged paragraph";
-            Console.WriteLine(_exceptionReport);
+            if (string.IsNullOrWhiteSpace(_exceptionReport))
+            {
+                _exceptionReport = "Correctly tagged paragraph";
+                hasException = false;
+            }
+            return hasException;
+            
         }
 
 
-        public bool CheckElement(char[] elementArray)
+        public Tuple<bool,string> CheckElement(char[] elementArray)
         {
-            var enumerableArray = elementArray.GetEnumerator();
-            while (enumerableArray.MoveNext())
+            try
             {
-                var currentChar = enumerableArray.Current;
-                if (Convert.ToChar(currentChar) == '<') //start tag
+                var enumerableArray = elementArray.GetEnumerator();
+                while (enumerableArray.MoveNext())
                 {
-                    _canAdd = true;
-                    ProcessOpenTag(enumerableArray);
+                    var currentChar = enumerableArray.Current;
+                    if (Convert.ToChar(currentChar) == '<') //start tag
+                    {
+                        _canAdd = true;
+                        ProcessOpenTag(enumerableArray);
+                    }
                 }
+                return new Tuple<bool, string>(GetExceptionReport(), _exceptionReport);
             }
-            return true;
+            catch ( Exception ex)
+            {
+                // use logger log exception
+            }
+            return new Tuple<bool, string>(false, "Error parsing html string, please see log for more details.");
         }
     }
 }

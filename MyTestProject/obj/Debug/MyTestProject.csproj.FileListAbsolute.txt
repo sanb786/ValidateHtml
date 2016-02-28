@@ -3,3 +3,8 @@ C:\Work\MyTestProject\MyTestProject\obj\Debug\MyTestProject.csprojResolveAssembl
 C:\Work\MyTestProject\MyTestProject\obj\Debug\MyTestProject.pdb
 C:\Work\MyTestProject\MyTestProject\bin\Debug\MyTestProject.dll
 C:\Work\MyTestProject\MyTestProject\obj\Debug\MyTestProject.dll
+D:\Work\ValidateHtml\MyTestProject\bin\Debug\MyTestProject.dll
+D:\Work\ValidateHtml\MyTestProject\bin\Debug\MyTestProject.pdb
+D:\Work\ValidateHtml\MyTestProject\obj\Debug\MyTestProject.csprojResolveAssemblyReference.cache
+D:\Work\ValidateHtml\MyTestProject\obj\Debug\MyTestProject.dll
+D:\Work\ValidateHtml\MyTestProject\obj\Debug\MyTestProject.pdb

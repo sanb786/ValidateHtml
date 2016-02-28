@@ -22,6 +22,7 @@ namespace MyTestProject
 
         public void FlatternNested(object[] jArray)
         {
+            if (jArray == null) return;
             foreach(var item in jArray)
             {
                 switch (item.GetType().Name)
