@@ -32,9 +32,9 @@ namespace MyTestProject
                         break;
 
                     case "Int32[]":
-                        FlatternNested(ConvertFromIntArr((int[])item));
+                        var objArr = ConvertFromIntArr((int[])item);
+                        if (objArr != null) FlatternNested(objArr);
                         break;
-
                     case "Object[]":
                         FlatternNested((object[])item);
                            break;

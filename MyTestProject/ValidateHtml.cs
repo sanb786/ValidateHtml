@@ -110,11 +110,14 @@ namespace MyTestProject
         }
 
 
-        public Tuple<bool,string> CheckElement(char[] elementArray)
+        public Tuple<bool,string> CheckElement(string htmlString)
         {
+            if(string.IsNullOrWhiteSpace(htmlString)) return new Tuple<bool, string>(false, "Please process a valid html");
+
             try
             {
-                var enumerableArray = elementArray.GetEnumerator();
+
+                var enumerableArray = htmlString.ToCharArray().GetEnumerator();
                 while (enumerableArray.MoveNext())
                 {
                     var currentChar = enumerableArray.Current;
